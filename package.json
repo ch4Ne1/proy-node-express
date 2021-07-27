@@ -1,0 +1,23 @@
+{
+  "name": "proyecto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon --exec babel-node src/index.js",
+    "build": "babel src/ -- out-dir dist",
+    "start": "node dist/index.js"
+  },
+  "author": "chanel jose",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.14.8",
+    "@babel/core": "^7.14.8",
+    "@babel/node": "^7.14.7",
+    "@babel/preset-env": "^7.14.8",
+    "sequelize-cli": "^6.2.0"
+  },
+  "dependencies": {
+    "sequelize": "^6.6.5"
+  }
+}

@@ -1,0 +1,98 @@
+Tú18:38
+buenas noches...
+Edylson Jair Condorena18:38
+buenas noches profe
+Cristian Chura18:46
+npm i @babel/cli @babel/node @babel/core @babel/preset-env
+Cristian Chura18:55
+"scripts": {
+    "dev": "nodemon --exec babel-node src/index.js",
+    "build": "babel src/ --out-dir dist",
+    "start": "node dist/index.js"
+  },
+Cristian Chura18:57
+{
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": true
+          }
+        }
+      ]
+    ]
+  }
+Edylson Jair Condorena18:58
+disculpe para que dist
+Cristian Chura19:05
+https://sequelize.org/master/manual/migrations.html
+Edylson Jair Condorena19:10
+una consulta profe: cual es difrencia d sequelize vs sequelize -cli
+Edylson Jair Condorena19:11
+gracias profe
+Edylson Jair Condorena19:18
+pasanos profe..la configuracion
+Cristian Chura19:18
+const path = require('path');
+
+module.exports = {
+  'config': path.resolve('config', 'database.json'),
+  'models-path': path.resolve('db', 'models'),
+  'seeders-path': path.resolve('db', 'seeders'),
+  'migrations-path': path.resolve('db', 'migrations')
+};
+Cristian Chura19:22
+const path = require('path');
+
+module.exports = {
+  'config': path.resolve('src/config', 'database.json'),
+  'models-path': path.resolve('src', 'models'),
+  'seeders-path': path.resolve('src', 'seeders'),
+  'migrations-path': path.resolve('src', 'migrations')
+};
+Edylson Jair Condorena19:23
+se entendio
+Cristian Chura19:31
+npx sequelize-cli model:generate --name Usuario
+Cristian Chura19:34
+npx sequelize-cli model:generate --name Usuario --attributes username:string,email:string,password:string,estado:boolean
+Edylson Jair Condorena19:38
+todo automatico se genero
+es mejor asi, profe..
+...excelente
+Edylson Jair Condorena19:47
+$ npm i mysql2
+
+added 12 packages, and audited 452 packages in 4s
+
+32 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+me salio esto profe..
+ok
+juan guzman19:49
+$ npx sequelize-cli db:migrate
+
+Sequelize CLI [Node: 14.17.0, CLI: 6.2.0, ORM: 6.6.5]
+
+Loaded configuration file "src\config\database.json".
+Using environment "development".
+
+ERROR: Unknown database 'database_development'
+me sale ese error
+Edylson Jair Condorena19:49
+Sequelize CLI [Node: 14.17.0, CLI: 6.2.0, ORM: 6.6.5]
+
+Loaded configuration file "src\config\database.json".
+Using environment "development".
+== 20210726233503-create-usuario: migrating =======
+== 20210726233503-create-usuario: migrated (0.042s)
+juan guzman19:51
+si aparecio mi tabla 
+Edylson Jair Condorena19:54
+status
+Edylson Jair Condorena19:58
+si deseo añadir un campo a la tabla USUARIOS
+COMO HAGO PROFE
